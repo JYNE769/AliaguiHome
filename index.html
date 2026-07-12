@@ -13,9 +13,12 @@
 </head>
 
 <body class="m-0 p-0 font-[Quicksand] list-none">
-    <header 
-        class="fixed left-0 top-0 z-50 w-full bg-transparent md:text-black md:shadow-md">
-        <nav id="navbar" class="grid w-full grid-cols-3 items-center px-5 text-white py-3 md:px-16">
+    <!-- navbar -->
+    <header class="relative h-fit text-white">
+
+        <!-- navbar -->
+        <nav id="navbar"
+            class="fixed left-0 top-0 z-50 grid w-full grid-cols-3 items-center px-5 py-3 text-white text-3xl md:px-16">
 
             <!-- hamburger sur telephone -->
             <div class="flex justify-start md:hidden">
@@ -25,74 +28,64 @@
             </div>
 
             <!-- menu a gauche -->
-            <div class="hidden gap-10 text-[18px] font-normal md:flex">
-                <a href="index.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
+            <div class="hidden gap-10 font-normal md:flex">
+                <a href="index.html" class="underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
                     Accueil
                 </a>
-                <a href="collections.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
+                <a href="collections.html" class="underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
                     Collections
                 </a>
             </div>
 
             <!-- Logo -->
             <div class="flex justify-center">
-                <!-- logo blanc sur telephone -->
-                <img id="logo-blanc" src="img/logo aliagui home blanc.png" alt="Aliagui Home" class="w-12">
-                <!-- logo noir sur telephone après le scroll -->
-                <img id="logo-noir-mobile" src="img/logo aliagui home noir(1).png" alt="Aliagui Home" class="hidden w-12">
+                <!-- logo blanc -->
+                <img id="logo-blanc" src="img/logo blanc.png" alt="Aliagui Home" class="w-12 md:w-16">
 
+                <!-- logo noir au scroll -->
+                <img id="logo-noir" src="img/logo noir.png" alt="Aliagui Home" class="hidden w-12 md:w-16">
             </div>
 
             <!-- menu a droite -->
             <div class="flex items-center justify-end">
+
                 <!-- menu sur ordi -->
-                <div class="hidden items-center gap-10 text-[18px] font-normal md:flex">
-                    <a href="apropos.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
+                <div class="hidden items-center gap-10 font-normal md:flex">
+                    <a href="apropos.html" class="underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
                         À propos
                     </a>
-                    <a href="contact.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
+                    <a href="contact.html" class="underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
                         Contact
                     </a>
                 </div>
 
-                <div class="flex items-center gap-4 text-[17px] md:ml-10 md:gap-5 md:text-[18px]">
-                    <a href="profil.html" class="flex items-center justify-center">
+                <div class="flex items-center gap-4 md:ml-10 md:gap-5">
+                    <a href="profil.html" class="flex items-center">
                         <i class="fa-solid fa-user"></i>
                     </a>
-                    <button type="button" class="flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass mt-[2px]"></i>
-                    </button>
                     <a href="https://wa.me/2250142789097" target="_blank" class="flex items-center justify-center">
-                        <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
-
             </div>
-
         </nav>
 
         <!-- menu sur telephone -->
         <div id="mobile-menu"
-            class="hidden flex-col border-t border-gray-200 bg-white px-6 py-5 text-[16px] font-normal text-black shadow-md md:hidden">
-
-            <a href="index.html" class="border-b border-gray-200 py-3">
+            class="fixed left-0 top-[64px] z-40 hidden w-full flex-col border-t border-gray-400 bg-white px-6 py-5 text-[16px] font-normal text-black shadow-md md:hidden">
+            <a href="index.html" class="border-b border-gray-100 py-3">
                 Accueil
             </a>
-
-            <a href="collections.html" class="border-b border-gray-200 py-3">
+            <a href="collections.html" class="border-b border-gray-100 py-3">
                 Collections
             </a>
-
-            <a href="apropos.html" class="border-b border-gray-200 py-3">
+            <a href="apropos.html" class="border-b border-gray-100 py-3">
                 À propos
             </a>
-
             <a href="contact.html" class="py-3">
                 Contact
             </a>
-
         </div>
-
     </header>
     <div class="w-full">
         <div class="w-full relative overflow-clip h-fit md:h-[100svh]">
@@ -189,50 +182,86 @@
                 </div>
             </div>
         </div>
-        <footer class="">
-            <div class="w-[60svw] border-t justify-self-center md:mb-15"></div>
-            <div class="grid md:grid-cols-7 font-light divide p-10 justify-between">
-                <div class="hidden md:flex flex-col col-span-2 gap-4">
-                    <h2 class="text-2xl w-[80%]">ABONNEZ-VOUS A NOTRE NEWSLETTER</h2>
-                    <input class="border w-[80%] p-2 rounded-[50ch]" type="email" placeholder="Votre email">
-                    <div class="text-xl">
-                        <li>Livraison</li>
-                        <li>Retours & échanges</li>
-                        <li>FAQ</li>
-                        <li>Conditions génerales</li>
+        <footer class="w-full bg-white pt-12 text-black">
+            <div class="grid grid-cols-1 md:h-[310px] md:grid-cols-3">
+
+                <!-- Newsletter et aide -->
+                <div
+                    class="border-b border-gray-400 px-7 py-9 text-center md:border-b-0 md:border-r md:pl-24 md:pr-16 md:pt-8 md:text-left">
+                    <h3 class="mb-5 text-[17px] font-normal uppercase leading-6 md:text-[18px]">
+                        Abonnez-vous à notre<br>newsletter
+                    </h3>
+
+                    <div
+                        class="mx-auto mb-7 flex h-9 w-full max-w-[220px] items-center overflow-hidden rounded-full border border-gray-300 px-4 md:mx-0">
+                        <input type="email" placeholder="Votre email"
+                            class="w-full bg-transparent text-xs outline-none placeholder:text-gray-800">
+                        <a href="profil.html">
+                            <i class="fa-solid fa-arrow-right cursor-pointer text-xs"></i>
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col items-center text-[14px] font-normal md:items-start">
+                        <a href="#">Livraison</a>
+                        <a href="#">Retours & échanges</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Conditions générales</a>
                     </div>
                 </div>
-                <div class="flex col-span-2 flex-col justify-between md:col-span-3 items-center md:border-r md:border-l h-[50svh]">
-                    <div class="flex flex-col items-center gap-4">
-                        <h2 class="text-2xl">MENU</h2>
-                        <div class="grid grid-cols-3 items-center md:flex text-lg gap-2 md:text-xl md:gap-5">
-                            <a href="index.html">Accuiel</a>
-                            <a href="collection.html">Collection</a>
-                            <a href="">A propos</a>
-                            <a href="">Contact</a>
-                            <a href="showroom.html">Showroom</a>
-                        </div>
-                        <img class="md:h-30 h-25" src="img/logo aliagui home noir(1).png" alt="">
+
+                <!-- Menu de la navbar -->
+                <div class="border-b border-gray-400 px-7 py-9 text-center md:border-b-0 md:border-r md:px-16 md:pt-8">
+                    <h3 class="mb-5 text-[17px] font-normal uppercase md:text-[18px]">
+                        Menu
+                    </h3>
+
+                    <div class="mb-7 flex flex-wrap justify-center gap-4 text-[15px] font-normal md:text-[16px]">
+                        <a href="index.html">Accueil</a>
+                        <a href="collections.html">Collections</a>
+                        <a href="apropos.html">À propos</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="showroom.html">Showroom</a>
                     </div>
-                    <div class="flex gap-7 text-4xl">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-tiktok"></i>
+
+                    <img src="img/logo noir.png" alt="Aliagui Home" class="mx-auto mb-8 w-16 md:mb-9 md:w-20">
+
+                    <div class="flex justify-center gap-7 text-[21px] md:gap-8 md:text-[22px]">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/2250142789097" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="hidden md:flex flex-col col-span-2 gap-4 items-end text-xl">
-                    <h2 class="text-2xl">NOUS RETROUVER</h2>
-                    <li>Abidjan, Rivera Anono</li>
-                    <li>+225 01 42 78 90 97</li>
-                    <li>aliaguihome@gmail.com</li>
-                    <li>Lun-Sam: 9h-18h</li>
+
+                <!-- partie coordonnées : nous retrouver -->
+                <div class="px-7 py-9 text-center md:pl-16 md:pr-24 md:pt-8 md:text-right">
+                    <h3 class="mb-5 text-[17px] font-normal uppercase md:text-[18px]">
+                        Nous retrouver
+                    </h3>
+
+                    <div class="text-[14px] font-normal leading-7">
+                        <p>Abidjan, Riviera Anono</p>
+                        <p>+225 01 42 78 90 97</p>
+                        <p>aliaguihome@gmail.com</p>
+                        <p>Lun - Sam : 9h - 18h</p>
+                    </div>
                 </div>
             </div>
-            <div class="p-10 border-t flex justify-center items-center">Aliagui Home. Tous droits réservés</div>
+
+            <div class="border-t border-gray-400 py-5 text-center text-[13px] font-normal md:text-[14px]">
+                © Aliagui Home. Tous droits réservés
+            </div>
         </footer>
     </div>
-     <script>
+    <script>
         function ouvrirMenu() {
             const menu = document.getElementById("mobile-menu");
 
@@ -243,25 +272,24 @@
         function changerNavbar() {
             const navbar = document.getElementById("navbar");
             const logoBlanc = document.getElementById("logo-blanc");
-            const logoNoirMobile = document.getElementById("logo-noir-mobile");
+            const logoNoir = document.getElementById("logo-noir");
 
-                if (window.scrollY > 40) {
-                    navbar.classList.add("bg-white", "text-black", "shadow-md");
-                    navbar.classList.remove("bg-transparent", "text-white");
+            if (window.scrollY > 50) {
+                navbar.classList.add("bg-white", "text-black", "shadow-md");
+                navbar.classList.remove("text-white");
 
-                    logoBlanc.classList.add("hidden");
-                    logoNoirMobile.classList.remove("hidden");
-                } else {
-                    navbar.classList.remove("bg-white", "text-black", "shadow-md");
-                    navbar.classList.add("bg-transparent", "text-white");
-                    logoBlanc.classList.remove("hidden");
-                    logoNoirMobile.classList.add("hidden");
-                }
+                logoBlanc.classList.add("hidden");
+                logoNoir.classList.remove("hidden");
+            } else {
+                navbar.classList.remove("bg-white", "text-black", "shadow-md");
+                navbar.classList.add("text-white");
 
-            } 
+                logoBlanc.classList.remove("hidden");
+                logoNoir.classList.add("hidden");
+            }
+        }
 
         window.addEventListener("scroll", changerNavbar);
-        window.addEventListener("resize", changerNavbar);
         window.addEventListener("load", changerNavbar);
     </script>
 
