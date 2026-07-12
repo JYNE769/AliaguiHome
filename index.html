@@ -13,6 +13,87 @@
 </head>
 
 <body class="m-0 p-0 font-[Quicksand] list-none">
+    <header 
+        class="fixed left-0 top-0 z-50 w-full bg-transparent md:text-black md:shadow-md">
+        <nav id="navbar" class="grid w-full grid-cols-3 items-center px-5 text-white py-3 md:px-16">
+
+            <!-- hamburger sur telephone -->
+            <div class="flex justify-start md:hidden">
+                <button type="button" onclick="ouvrirMenu()" class="flex items-center justify-center text-[22px]">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- menu a gauche -->
+            <div class="hidden gap-10 text-[18px] font-normal md:flex">
+                <a href="index.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
+                    Accueil
+                </a>
+                <a href="collections.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
+                    Collections
+                </a>
+            </div>
+
+            <!-- Logo -->
+            <div class="flex justify-center">
+                <!-- logo blanc sur telephone -->
+                <img id="logo-blanc" src="img/logo aliagui home blanc.png" alt="Aliagui Home" class="w-12">
+                <!-- logo noir sur telephone après le scroll -->
+                <img id="logo-noir-mobile" src="img/logo aliagui home noir(1).png" alt="Aliagui Home" class="hidden w-12">
+
+            </div>
+
+            <!-- menu a droite -->
+            <div class="flex items-center justify-end">
+                <!-- menu sur ordi -->
+                <div class="hidden items-center gap-10 text-[18px] font-normal md:flex">
+                    <a href="apropos.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
+                        À propos
+                    </a>
+                    <a href="contact.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
+                        Contact
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-4 text-[17px] md:ml-10 md:gap-5 md:text-[18px]">
+                    <a href="profil.html" class="flex items-center justify-center">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <button type="button" class="flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass mt-[2px]"></i>
+                    </button>
+                    <a href="https://wa.me/2250142789097" target="_blank" class="flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp text-[20px]"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!-- menu sur telephone -->
+        <div id="mobile-menu"
+            class="hidden flex-col border-t border-gray-200 bg-white px-6 py-5 text-[16px] font-normal text-black shadow-md md:hidden">
+
+            <a href="index.html" class="border-b border-gray-200 py-3">
+                Accueil
+            </a>
+
+            <a href="collections.html" class="border-b border-gray-200 py-3">
+                Collections
+            </a>
+
+            <a href="apropos.html" class="border-b border-gray-200 py-3">
+                À propos
+            </a>
+
+            <a href="contact.html" class="py-3">
+                Contact
+            </a>
+
+        </div>
+
+    </header>
     <div class="w-full">
         <div class="w-full relative overflow-clip h-fit md:h-[100svh]">
             <div
@@ -151,6 +232,39 @@
             <div class="p-10 border-t flex justify-center items-center">Aliagui Home. Tous droits réservés</div>
         </footer>
     </div>
+     <script>
+        function ouvrirMenu() {
+            const menu = document.getElementById("mobile-menu");
+
+            menu.classList.toggle("hidden");
+            menu.classList.toggle("flex");
+        }
+
+        function changerNavbar() {
+            const navbar = document.getElementById("navbar");
+            const logoBlanc = document.getElementById("logo-blanc");
+            const logoNoirMobile = document.getElementById("logo-noir-mobile");
+
+                if (window.scrollY > 40) {
+                    navbar.classList.add("bg-white", "text-black", "shadow-md");
+                    navbar.classList.remove("bg-transparent", "text-white");
+
+                    logoBlanc.classList.add("hidden");
+                    logoNoirMobile.classList.remove("hidden");
+                } else {
+                    navbar.classList.remove("bg-white", "text-black", "shadow-md");
+                    navbar.classList.add("bg-transparent", "text-white");
+                    logoBlanc.classList.remove("hidden");
+                    logoNoirMobile.classList.add("hidden");
+                }
+
+            } 
+
+        window.addEventListener("scroll", changerNavbar);
+        window.addEventListener("resize", changerNavbar);
+        window.addEventListener("load", changerNavbar);
+    </script>
+
 </body>
 
 </html>
