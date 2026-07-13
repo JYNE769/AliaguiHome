@@ -18,17 +18,17 @@
 
         <!-- navbar -->
         <nav id="navbar"
-            class="fixed left-0 top-0 z-50 grid w-full grid-cols-3 items-center px-5 py-3 text-white text-3xl md:px-16">
+            class="fixed left-0 top-0 z-50 grid w-full grid-cols-3 items-center px-5 py-3 text-white text-3xl lg:px-16">
 
             <!-- hamburger sur telephone -->
-            <div class="flex justify-start md:hidden">
+            <div class="flex justify-start lg:hidden">
                 <button type="button" onclick="ouvrirMenu()" class="flex items-center justify-center text-[22px]">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
 
             <!-- menu a gauche -->
-            <div class="hidden gap-10 font-normal md:flex">
+            <div class="hidden gap-10 font-normal lg:flex">
                 <a href="index.html" class="underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
                     Accueil
                 </a>
@@ -40,17 +40,17 @@
             <!-- Logo -->
             <div class="flex justify-center">
                 <!-- logo blanc -->
-                <img id="logo-blanc" src="img/logo blanc.png" alt="Aliagui Home" class="w-12 md:w-16">
+                <img id="logo-blanc" src="img/logo blanc.png" alt="Aliagui Home" class="w-12 lg:w-16">
 
                 <!-- logo noir au scroll -->
-                <img id="logo-noir" src="img/logo noir.png" alt="Aliagui Home" class="hidden w-12 md:w-16">
+                <img id="logo-noir" src="img/logo noir.png" alt="Aliagui Home" class="hidden w-12 lg:w-16">
             </div>
 
             <!-- menu a droite -->
             <div class="flex items-center justify-end">
 
                 <!-- menu sur ordi -->
-                <div class="hidden items-center gap-10 font-normal md:flex">
+                <div class="hidden items-center gap-10 font-normal lg:flex">
                     <a href="apropos.html" class="underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
                         À propos
                     </a>
@@ -59,7 +59,7 @@
                     </a>
                 </div>
 
-                <div class="flex items-center gap-4 md:ml-10 md:gap-5">
+                <div class="flex items-center gap-4 lg:ml-10 lg:gap-5">
                     <a href="profil.html" class="flex items-center">
                         <i class="fa-solid fa-user"></i>
                     </a>
@@ -72,7 +72,7 @@
 
         <!-- menu sur telephone -->
         <div id="mobile-menu"
-            class="fixed left-0 top-[64px] z-40 hidden w-full flex-col border-t border-gray-400 bg-white px-6 py-5 text-[16px] font-normal text-black shadow-md md:hidden">
+            class="fixed left-0 top-[64px] z-40 hidden w-full flex-col border-t border-gray-400 bg-white px-6 py-5 text-[16px] font-normal text-black shadow-lg lg:hidden">
             <a href="index.html" class="border-b border-gray-100 py-3">
                 Accueil
             </a>
@@ -87,142 +87,204 @@
             </a>
         </div>
     </header>
+    <div id="overlay" aria-hidden="true"
+        class="fixed inset-0 z-[95] bg-black/30 transition-opacity duration-300 opacity-0 pointer-events-none">
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" role="dialog" aria-modal="true" aria-label="Menu principal" class="fixed inset-y-0 left-0 z-[96] w-full sm:max-w-lg bg-white shadow-2xl flex flex-col
+                transition-transform duration-300 -translate-x-full">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold">Collections</h2>
+            <ul class="mt-4 space-y-2">
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="antique">
+                    <label>
+                        <input type="checkbox">Antique
+                    </label>
+                </li>
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="flora">
+                    <label>
+                        <input type="checkbox">Flora
+                    </label>
+                </li>
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="ordinaire">
+                    <label>
+                        <input type="checkbox">Ordinaire
+                    </label>
+                </li>
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="ketchene">
+                    <label>
+                        <input type="checkbox">Kétchéné
+                    </label>
+                </li>
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="tradition">
+                    <label>
+                        <input type="checkbox">Tradition
+                    </label>
+                </li>
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="indigo">
+                    <label>
+                        <input type="checkbox">Indigo
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="p-4">
+            <h2 class="text-lg font-semibold">Catégories</h2>
+            <ul class="mt-4 space-y-2">
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="drap">
+                    <label>
+                        <input type="checkbox">Draps
+                    </label>
+                </li>
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="oreiller">
+                    <label>
+                        <input type="checkbox">Oreillers
+                    </label>
+                </li>
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="artDeTable">
+                    <label>
+                        <input type="checkbox">Arts de table
+                    </label>
+                </li>
+                <li class="flex px-3 py-2 hover:bg-stone-100 rounded gap-2" id="soie">
+                    <label>
+                        <input type="checkbox">Carrés de soie
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <button type="button" onclick="appliquerTri()"
+            class="border p-2 w-fit self-center rounded-xl hover:text-white hover:bg-black">Appliquer</button>
+    </aside>
+
     <div
         class="  bg-gray-400 bg-[url(img/fonddrap.jpg)] bg-blend-multiply bg-cover bg-center h-[100svh] text-white flex pb-16">
-        <h1 class="text-5xl md:text-7xl w-[100%] text-center absolute self-center">COLLECTIONS</h1>
+        <h1 class="text-5xl lg:text-7xl w-[100%] text-center absolute self-center">COLLECTIONS</h1>
     </div>
-    <div class="flex justify-between md:text-2xl md:p-10 font-light">
-        <p><i class="fa-solid fa-filter"></i>Filtre</p>
-        <div class="flex gap-4">
-            <p>Trier par</p>
-            <select class="border text-gray-400 rounded-xl" name="" id="">
-                <option value="recent">Plus recent</option>
-                <option value="popularite">Popularité</option>
-                <option value="note">Note moyenne</option>
-                <option value="croissant">Prix croissant</option>
-                <option value="decroissant">prix décroissant</option>
-            </select>
-        </div>
+    <div class="flex justify-between lg:text-2xl lg:p-10 font-light">
+        <!-- Bouton d’ouverture -->
+        <button id="openSidebar"><i class="fa-solid fa-filter"></i>Filtre</button>
     </div>
-    <div class="grid grid-cols-2 gap-1 p-3 md:grid-cols-4 md:gap-10 md:p-10 items-center md:text-xl">
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+    <div class="grid grid-cols-2 gap-1 p-3 md:grid-cols-3 lg:grid-cols-4 lg:gap-3 lg:p-10 items-center lg:text-xl">
+        <div class="mb-10 produit drap antique">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/draporange.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Drap</p>
+            <p class="lg:text-2xl font-medium">Drap</p>
             <p>Motif</p>
             <p>Orange</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+        <div class="mb-10 produit oreiller antique">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/oreiller_bleu_1.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Oreiller</p>
+            <p class="lg:text-2xl font-medium">Oreiller</p>
             <p>Motif</p>
             <p>Bleu</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+        <div class="mb-10 produit soie antique">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/carre1.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Carré de soie</p>
+            <p class="lg:text-2xl font-medium">Carré de soie</p>
             <p>Motif</p>
             <p>Terre cuite</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+        <div class="mb-10 produit drap flora">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/drapbordeau.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Drap</p>
+            <p class="lg:text-2xl font-medium">Drap</p>
             <p>Motif</p>
             <p>Bordeau</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+        <div class="mb-10 produit drap ketchene">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/drapfondjaune.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Drap</p>
+            <p class="lg:text-2xl font-medium">Drap</p>
             <p>Motif</p>
             <p>Jaune</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+        <div class="mb-10 produit oreiller flora">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/oreiller_marron.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Oreiller</p>
+            <p class="lg:text-2xl font-medium">Oreiller</p>
             <p>Motif</p>
             <p>Marron</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+        <div class="mb-10 produit drap tradition">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/drapvert.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Drap</p>
+            <p class="lg:text-2xl font-medium">Drap</p>
             <p>Motif</p>
             <p>Vert sombre</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+        <div class="mb-10 produit artDeTable antique">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/table1.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Art de table</p>
+            <p class="lg:text-2xl font-medium">Art de table</p>
             <p>Motif</p>
             <p>Beige</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+        <div class="mb-10 produit oreiller ordinaire">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/oreiller_jaune.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Oreiller</p>
+            <p class="lg:text-2xl font-medium">Oreiller</p>
             <p>Motif</p>
             <p>Jaune orangé</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
-            <div class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120">
+        <div class="mb-10 produit drap ordinaire">
+            <div class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120">
                 <img class="h-[65%]" src="img/drapolive.png" alt="">
             </div>
-            <p class="md:text-2xl font-medium">Drap</p>
+            <p class="lg:text-2xl font-medium">Drap</p>
             <p>Motif</p>
             <p>Vert olive</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
+        <div class="mb-10 produit artDeTable flora">
             <div
-                class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120 relative group hover:p-0 overflow-hidden">
+                class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120 relative group hover:p-0 overflow-hidden">
                 <img class="h-[65%] group-hover:hidden" src="img/table2.png" alt="">
                 <div
                     class="absolute opacity-0 h-full w-full group-hover:opacity-100 transition-all duration-700 bg-[url(img/essaitablenoir.jpg)] group-hover:bg-cover">
                 </div>
             </div>
-            <p class="md:text-2xl font-medium">Art de table</p>
+            <p class="lg:text-2xl font-medium">Art de table</p>
             <p>Motif</p>
             <p>Marron sombre</p>
             <p>50.000FCFA</p>
         </div>
-        <div class="mb-10">
+        <div class="mb-10 produit drap antique">
             <div
-                class="bg-[#F5F5F5] justify-center items-end md:rounded-3xl flex pb-5 md:pb-15 h-[30svh] md:h-120 relative group hover:p-0 overflow-hidden">
+                class="bg-[#F5F5F5] justify-center items-end lg:rounded-3xl flex pb-5 lg:pb-15 h-[30svh] lg:h-120 relative group hover:p-0 overflow-hidden">
                 <img class="h-[65%] group-hover:hidden" src="img/drapfondbleu.png" alt="">
                 <div
                     class="absolute opacity-0 h-full w-full group-hover:opacity-100 transition-all duration-700 bg-[url(img/essaiDrapBleu.jpg)] group-hover:bg-cover">
                 </div>
             </div>
-            <p class="md:text-2xl font-medium">Drap</p>
+            <p class="lg:text-2xl font-medium">Drap</p>
             <p>Motif</p>
             <p>Bleu</p>
             <p>50.000FCFA</p>
         </div>
     </div>
-    <div class="flex justify-between w-[100svw] pl-5 pr-5 mb-5 md:w-[50svw] justify-self-center md:p-10">
+    <div class="flex justify-between w-[100svw] pl-5 pr-5 mb-5 lg:w-[50svw] justify-self-center lg:p-10">
         <a class=" hover:scale-110" href="">précédent</a>
         <div class="flex gap-5">
             <a class="border-2 border-blue-500 h-6 w-6 text-center rounded-sm hover:scale-110" href="">1</a>
@@ -234,26 +296,25 @@
     </div>
     <!-- footer -->
     <footer class="w-full bg-white pt-12 text-black">
-        <div class="grid grid-cols-1 md:h-[310px] md:grid-cols-3">
+        <div class="grid grid-cols-1 lg:h-[310px] lg:grid-cols-3">
 
             <!-- Newsletter et aide -->
             <div
-                class="border-b border-gray-400 px-7 py-9 text-center md:border-b-0 md:border-r md:pl-24 md:pr-16 md:pt-8 md:text-left">
-                <h3 class="mb-5 text-[17px] font-normal uppercase leading-6 md:text-[18px]">
+                class="border-b border-gray-400 px-7 py-9 text-center lg:border-b-0 lg:border-r lg:pl-24 lg:pr-16 lg:pt-8 lg:text-left">
+                <h3 class="mb-5 text-[17px] font-normal uppercase leading-6 lg:text-[18px]">
                     Abonnez-vous à notre<br>newsletter
                 </h3>
 
                 <div
-                    class="mx-auto mb-7 flex h-9 w-full max-w-[220px] items-center overflow-hidden rounded-full border border-gray-300 px-4 md:mx-0">
-                    <input type="email"
-                        placeholder="Votre email"
+                    class="mx-auto mb-7 flex h-9 w-full max-w-[220px] items-center overflow-hidden rounded-full border border-gray-300 px-4 lg:mx-0">
+                    <input type="email" placeholder="Votre email"
                         class="w-full bg-transparent text-xs outline-none placeholder:text-gray-800">
                     <a href="profil.html">
                         <i class="fa-solid fa-arrow-right cursor-pointer text-xs"></i>
                     </a>
                 </div>
 
-                <div class="flex flex-col items-center text-[14px] font-normal md:items-start">
+                <div class="flex flex-col items-center text-[14px] font-normal lg:items-start">
                     <a href="#">Livraison</a>
                     <a href="#">Retours & échanges</a>
                     <a href="#">FAQ</a>
@@ -262,13 +323,12 @@
             </div>
 
             <!-- Menu de la navbar -->
-            <div
-                class="border-b border-gray-400 px-7 py-9 text-center md:border-b-0 md:border-r md:px-16 md:pt-8">
-                <h3 class="mb-5 text-[17px] font-normal uppercase md:text-[18px]">
+            <div class="border-b border-gray-400 px-7 py-9 text-center lg:border-b-0 lg:border-r lg:px-16 lg:pt-8">
+                <h3 class="mb-5 text-[17px] font-normal uppercase lg:text-[18px]">
                     Menu
                 </h3>
 
-                <div class="mb-7 flex flex-wrap justify-center gap-4 text-[15px] font-normal md:text-[16px]">
+                <div class="mb-7 flex flex-wrap justify-center gap-4 text-[15px] font-normal lg:text-[16px]">
                     <a href="index.html">Accueil</a>
                     <a href="collections.html">Collections</a>
                     <a href="apropos.html">À propos</a>
@@ -276,11 +336,9 @@
                     <a href="showroom.html">Showroom</a>
                 </div>
 
-                <img src="img/logo noir.png"
-                    alt="Aliagui Home"
-                    class="mx-auto mb-8 w-16 md:mb-9 md:w-20">
+                <img src="img/logo noir.png" alt="Aliagui Home" class="mx-auto mb-8 w-16 lg:mb-9 lg:w-20">
 
-                <div class="flex justify-center gap-7 text-[21px] md:gap-8 md:text-[22px]">
+                <div class="flex justify-center gap-7 text-[21px] lg:gap-8 lg:text-[22px]">
                     <a href="#">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
@@ -297,8 +355,8 @@
             </div>
 
             <!-- partie coordonnées : nous retrouver -->
-            <div class="px-7 py-9 text-center md:pl-16 md:pr-24 md:pt-8 md:text-right">
-                <h3 class="mb-5 text-[17px] font-normal uppercase md:text-[18px]">
+            <div class="px-7 py-9 text-center lg:pl-16 lg:pr-24 lg:pt-8 lg:text-right">
+                <h3 class="mb-5 text-[17px] font-normal uppercase lg:text-[18px]">
                     Nous retrouver
                 </h3>
 
@@ -311,41 +369,11 @@
             </div>
         </div>
 
-        <div class="border-t border-gray-400 py-5 text-center text-[13px] font-normal md:text-[14px]">
+        <div class="border-t border-gray-400 py-5 text-center text-[13px] font-normal lg:text-[14px]">
             © Aliagui Home. Tous droits réservés
         </div>
     </footer>
-    <script>
-        function ouvrirMenu() {
-            const menu = document.getElementById("mobile-menu");
-
-            menu.classList.toggle("hidden");
-            menu.classList.toggle("flex");
-        }
-
-        function changerNavbar() {
-            const navbar = document.getElementById("navbar");
-            const logoBlanc = document.getElementById("logo-blanc");
-            const logoNoir = document.getElementById("logo-noir");
-
-            if (window.scrollY > 50) {
-                navbar.classList.add("bg-white", "text-black", "shadow-md");
-                navbar.classList.remove("text-white");
-
-                logoBlanc.classList.add("hidden");
-                logoNoir.classList.remove("hidden");
-            } else {
-                navbar.classList.remove("bg-white", "text-black", "shadow-md");
-                navbar.classList.add("text-white");
-
-                logoBlanc.classList.remove("hidden");
-                logoNoir.classList.add("hidden");
-            }
-        }
-
-        window.addEventListener("scroll", changerNavbar);
-        window.addEventListener("load", changerNavbar);
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>

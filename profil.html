@@ -14,18 +14,18 @@
 
     <!-- navbar -->
     <header id="navbar"
-        class="fixed left-0 top-0 z-50 w-full bg-transparent text-white md:bg-white md:text-black md:shadow-md">
-        <nav class="grid w-full grid-cols-3 items-center px-5 py-3 md:px-16">
+        class="fixed left-0 top-0 z-50 w-full bg-transparent text-white lg:bg-white lg:text-black lg:shadow-lg">
+        <nav class="grid w-full grid-cols-3 items-center px-5 py-3 lg:px-16">
 
             <!-- hamburger sur telephone -->
-            <div class="flex justify-start md:hidden">
+            <div class="flex justify-start lg:hidden">
                 <button type="button" onclick="ouvrirMenu()" class="flex items-center justify-center text-[22px]">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
 
             <!-- menu a gauche -->
-            <div class="hidden gap-10 text-[18px] font-normal md:flex">
+            <div class="hidden gap-10 text-[18px] font-normal lg:flex">
                 <a href="index.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
                     Accueil
                 </a>
@@ -48,7 +48,7 @@
             <!-- menu a droite -->
             <div class="flex items-center justify-end">
                 <!-- menu sur ordi -->
-                <div class="hidden items-center gap-10 text-[18px] font-normal md:flex">
+                <div class="hidden items-center gap-10 text-[18px] font-normal lg:flex">
                     <a href="apropos.html" class="font-normal underline-offset-4 decoration-1 decoration-gray-400 hover:underline">
                         À propos
                     </a>
@@ -57,7 +57,7 @@
                     </a>
                 </div>
 
-                <div class="flex items-center gap-4 text-[17px] md:ml-10 md:gap-5 md:text-[18px]">
+                <div class="flex items-center gap-4 text-[17px] lg:ml-10 lg:gap-5 lg:text-[18px]">
                     <a href="profil.html" class="flex items-center justify-center">
                         <i class="fa-solid fa-user"></i>
                     </a>
@@ -75,7 +75,7 @@
 
         <!-- menu sur telephone -->
         <div id="mobile-menu"
-            class="hidden flex-col border-t border-gray-200 bg-white px-6 py-5 text-[16px] font-normal text-black shadow-md md:hidden">
+            class="hidden flex-col border-t border-gray-200 bg-white px-6 py-5 text-[16px] font-normal text-black shadow-lg lg:hidden">
 
             <a href="index.html" class="border-b border-gray-200 py-3">
                 Accueil
@@ -99,46 +99,46 @@
 
     <main class="w-full border-b border-gray-200 pb-10">
 
-        <section class="grid grid-cols-1 md:grid-cols-2">
+        <section class="grid grid-cols-1 lg:grid-cols-2">
 
             <!-- formulaire -->
             <div
-                class="order-2 flex items-center justify-center bg-white px-6 py-12 md:order-1 md:h-[900px] md:px-16 md:py-16">
+                class="order-2 flex items-center justify-center bg-white px-6 py-12 lg:order-1 lg:h-[900px] lg:px-16 lg:py-16">
 
                 <div class="w-full max-w-[430px]">
 
-                    <h1 class="mb-1 text-center text-[30px] font-normal md:text-left md:text-[40px]">
+                    <h1 class="mb-1 text-center text-[30px] font-normal lg:text-left lg:text-[40px]">
                         Créer un compte
                     </h1>
 
-                    <p class="mb-10 text-center text-[15px] font-normal md:text-left md:text-[20px]">
+                    <p class="mb-10 text-center text-[15px] font-normal lg:text-left lg:text-[20px]">
                         Rejoignez l'univers Aliagui Home
                     </p>
 
                     <form class="w-full">
 
-                        <label class="mb-2 block text-[16px] font-normal md:text-[18px]">
+                        <label class="mb-2 block text-[16px] font-normal lg:text-[18px]">
                             Nom complet
                         </label>
 
                         <input type="text" placeholder="Entrez votre nom" required
                             class="mb-8 w-full border-0 border-b border-gray-200 bg-transparent pb-3 text-sm outline-none placeholder:text-black/60 focus:border-gray-400">
 
-                        <label class="mb-2 block text-[16px] font-normal md:text-[18px]">
+                        <label class="mb-2 block text-[16px] font-normal lg:text-[18px]">
                             Adresse e-mail
                         </label>
 
                         <input type="email" placeholder="exemple@gmail.com" required
                             class="mb-8 w-full border-0 border-b border-gray-200 bg-transparent pb-3 text-sm outline-none placeholder:text-black/60 focus:border-gray-400">
 
-                        <label class="mb-2 block text-[16px] font-normal md:text-[18px]">
+                        <label class="mb-2 block text-[16px] font-normal lg:text-[18px]">
                             Mot de passe
                         </label>
 
                         <input type="password" placeholder="Minimum 8 caractères" required minlength="8"
                             class="mb-8 w-full border-0 border-b border-gray-200 bg-transparent pb-3 text-sm outline-none placeholder:text-black/60 focus:border-gray-400">
 
-                        <label class="mb-2 block text-[16px] font-normal md:text-[18px]">
+                        <label class="mb-2 block text-[16px] font-normal lg:text-[18px]">
                             Confirmer le mot de passe
                         </label>
 
@@ -149,7 +149,7 @@
 
                             <input type="checkbox" id="conditions" required class="h-4 w-4 accent-black">
 
-                            <label for="conditions" class="text-[14px] font-normal md:text-[16px]">
+                            <label for="conditions" class="text-[14px] font-normal lg:text-[16px]">
 
                                 J'accepte les conditions générales.
 
@@ -159,7 +159,7 @@
 
                         <!-- bouton créer mon compte -->
                         <button type="submit"
-                            class="h-12 w-full rounded border border-black text-[15px] font-normal text-black shadow-md hover:bg-black hover:text-white md:text-[16px]">
+                            class="h-12 w-full rounded border border-black text-[15px] font-normal text-black shadow-lg hover:bg-black hover:text-white lg:text-[16px]">
 
                             Créer mon compte
 
@@ -172,7 +172,7 @@
             </div>
 
             <!-- image -->
-            <div class="order-1 h-[380px] w-full md:order-2 md:h-[900px] md:pl-10">
+            <div class="order-1 h-[380px] w-full lg:order-2 lg:h-[900px] lg:pl-10">
 
                 <img src="img/profil image 4.jpeg" alt="Chambre Aliagui Home"
                     class="h-full w-full object-cover object-center">
@@ -186,18 +186,18 @@
     <!-- footer -->
     <footer class="w-full bg-white text-black pt-12">
 
-        <div class="grid grid-cols-1 md:h-[310px] md:grid-cols-3">
+        <div class="grid grid-cols-1 lg:h-[310px] lg:grid-cols-3">
 
             <!-- Newsletter et aide -->
             <div
-                class="border-b border-gray-200 px-7 py-9 text-center md:border-b-0 md:border-r md:pl-24 md:pr-16 md:pt-8 md:text-left">
+                class="border-b border-gray-200 px-7 py-9 text-center lg:border-b-0 lg:border-r lg:pl-24 lg:pr-16 lg:pt-8 lg:text-left">
 
-                <h3 class="mb-5 text-[17px] font-normal uppercase leading-6 md:text-[18px]">
+                <h3 class="mb-5 text-[17px] font-normal uppercase leading-6 lg:text-[18px]">
                     Abonnez-vous à notre<br>newsletter
                 </h3>
 
                 <div
-                    class="mx-auto mb-7 flex h-9 w-full max-w-[220px] items-center overflow-hidden rounded-full border border-gray-300 px-4 md:mx-0">
+                    class="mx-auto mb-7 flex h-9 w-full max-w-[220px] items-center overflow-hidden rounded-full border border-gray-300 px-4 lg:mx-0">
 
                     <input type="email" placeholder="Votre email"
                         class="w-full bg-transparent text-xs outline-none placeholder:text-gray-800">
@@ -208,7 +208,7 @@
 
                 </div>
 
-                <div class="flex flex-col items-center text-[14px] font-normal md:items-start">
+                <div class="flex flex-col items-center text-[14px] font-normal lg:items-start">
                     <a href="#">Livraison</a>
                     <a href="#">Retours & échanges</a>
                     <a href="#">FAQ</a>
@@ -219,13 +219,13 @@
             </div>
 
             <!-- Menu de la navbar -->
-            <div class="border-b border-gray-200 px-7 py-9 text-center md:border-b-0 md:border-r md:px-16 md:pt-8">
+            <div class="border-b border-gray-200 px-7 py-9 text-center lg:border-b-0 lg:border-r lg:px-16 lg:pt-8">
 
-                <h3 class="mb-5 text-[17px] font-normal uppercase md:text-[18px]">
+                <h3 class="mb-5 text-[17px] font-normal uppercase lg:text-[18px]">
                     Menu
                 </h3>
 
-                <div class="mb-7 flex flex-wrap justify-center gap-4 text-[15px] font-normal md:text-[16px]">
+                <div class="mb-7 flex flex-wrap justify-center gap-4 text-[15px] font-normal lg:text-[16px]">
 
                     <a href="index.html">Accueil</a>
                     <a href="collections.html">Collections</a>
@@ -235,9 +235,9 @@
 
                 </div>
 
-                <img src="img/logo noir.png" alt="Aliagui Home" class="mx-auto mb-8 w-16 md:mb-9 md:w-20">
+                <img src="img/logo noir.png" alt="Aliagui Home" class="mx-auto mb-8 w-16 lg:mb-9 lg:w-20">
 
-                <div class="flex justify-center gap-7 text-[21px] md:gap-8 md:text-[22px]">
+                <div class="flex justify-center gap-7 text-[21px] lg:gap-8 lg:text-[22px]">
 
                     <a href="#">
                         <i class="fa-brands fa-facebook-f"></i>
@@ -255,9 +255,9 @@
             </div>
 
             <!-- partie coordonnées: nous retrouver -->
-            <div class="px-7 py-9 text-center md:pl-16 md:pr-24 md:pt-8 md:text-right">
+            <div class="px-7 py-9 text-center lg:pl-16 lg:pr-24 lg:pt-8 lg:text-right">
 
-                <h3 class="mb-5 text-[17px] font-normal uppercase md:text-[18px]">
+                <h3 class="mb-5 text-[17px] font-normal uppercase lg:text-[18px]">
                     Nous retrouver
                 </h3>
 
@@ -274,7 +274,7 @@
 
         </div>
 
-        <div class="border-t border-gray-200 py-5 text-center text-[13px] font-normal md:text-[14px]">
+        <div class="border-t border-gray-200 py-5 text-center text-[13px] font-normal lg:text-[14px]">
             © Aliagui Home. Tous droits réservés
         </div>
 
@@ -296,13 +296,13 @@
             if (window.innerWidth < 768) {
 
                 if (window.scrollY > 40) {
-                    navbar.classList.add("bg-white", "text-black", "shadow-md");
+                    navbar.classList.add("bg-white", "text-black", "shadow-lg");
                     navbar.classList.remove("bg-transparent", "text-white");
 
                     logoBlanc.classList.add("hidden");
                     logoNoirMobile.classList.remove("hidden");
                 } else {
-                    navbar.classList.remove("bg-white", "text-black", "shadow-md");
+                    navbar.classList.remove("bg-white", "text-black", "shadow-lg");
                     navbar.classList.add("bg-transparent", "text-white");
 
                     logoBlanc.classList.remove("hidden");
@@ -310,7 +310,7 @@
                 }
 
             } else {
-                navbar.classList.add("bg-white", "text-black", "shadow-md");
+                navbar.classList.add("bg-white", "text-black", "shadow-lg");
                 navbar.classList.remove("bg-transparent", "text-white");
             }
         }
