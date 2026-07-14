@@ -211,9 +211,6 @@ const produits = [
         imagePrincipale: "img/table-antique8.png", imageFond: "img/tablefond-antique8.jpeg", categorie: "Art de table", collection: "antique", prix: "28 000 FCFA"
     },
     {
-        imagePrincipale: "img/table-antique9.png", imageFond: "img/tablefond-antique9.jpeg", categorie: "Art de table", collection: "antique", prix: "28 000 FCFA"
-    },
-    {
         imagePrincipale: "img/table-antique10.png", imageFond: "img/tablefond-antique10.jpeg", categorie: "Art de table", collection: "antique", prix: "28 000 FCFA"
     },
     {
